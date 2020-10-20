@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="ProjetoIntegrador.AreaClientes.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <title></title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+        <script type="text/javascript">
+            function MostraLoader(obj, img) {
+                $("#" + obj.id).hide();
+                $("#" + img).show();
+            }
+        </script>
+
+        <asp:ContentPlaceHolder ID="head" runat="server" />
+    </head>
+
+    <body>
+        <form id="form1" runat="server">
+            <div id="divContainerHPagina">
+                <div id="divCabecalho">
+                    <div id="divLogo">
+                        <br />
+                    </div>
+                    <div id="divLogo2"></div>
+                </div>
+
+                <div id="divConteudoPagina">
+                    <div id="divMenu">
+                        <ul>
+                            <li><a href="/AreaClientes/NovoChamado.aspx">Abrir chamado</a></li>
+                            <li><a href="/AreaClientes/Default.aspx?Acao=Sair">Sair do sistema</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="divBodyConteudo">
+                        <asp:ContentPlaceHolder ID="body" runat="server" />
+                    </div>
+                </div>
+
+                <div id="divRodape">
+                    <div id="divRedesSociais">
+                        <ul>
+                            <li><img src="/imagens/social/facebook.png" alt="Facebook" /></li>
+                            <li><img src="/imagens/social/twitter.png" alt="Twitter" /></li>
+                            <li><img src="/imagens/social/google.png" alt="Google+" /></li>
+                            <li><img src="/imagens/social/instagran.png" alt="Instagran" /></li>
+                            <li><img src="/imagens/social/reddit.png" alt="Reddit" /></li>
+                        </ul>
+                    </div>
+                    <p>Easy Systemas &copy 2013 - Todos os direitos reservados</p>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
